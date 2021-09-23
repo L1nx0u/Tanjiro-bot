@@ -82,4 +82,4 @@ Client.on("ready", function () {
     Client.user.setActivity(" !help Attend de nouvelle mise a jour de moi");
 });
 
-Client.login(process.env.TOKENZ);
+Client.login(process.env.TOKEN);

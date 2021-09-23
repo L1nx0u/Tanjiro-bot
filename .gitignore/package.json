@@ -1,0 +1,15 @@
+{
+  "name": "tanjiro-bot",
+  "version": "1.0.0",
+  "description": "Bot Discord",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "L1nx0u",
+  "license": "ISC"
+}

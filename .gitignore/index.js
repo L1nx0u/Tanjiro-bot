@@ -17,6 +17,14 @@ Client.on("message", message => {
                 
             
     };
+    Client.on("guildMemberAdd", member => {
+        let embed = new.Discord.RichEmbed ()
+        .setDescription("" + member.user + "viens d'arriver")
+        .setFooter("Maintenant nous sommes" + member.guild.memberCount)
+        .setColor("FFB800")
+        .setImage(" https://tenor.com/view/zenitsu-nezuko-chan-happy-anime-gif-14810985")
+    })
+    
 
     if(message.content == prefix + "help"  ){
         message.channel.send("Voici les commandes| !help | !nezuko |");
@@ -51,7 +59,7 @@ Client.on("message", message => {
                 message.reply(" Aucun membre n'as été trouvé ou mal mentionné");
             }
             else {
-                if(mention.kickable){
+                if(mention.kickable)                                                                                                                                                       {
                     mention.kick();
                     message.channel.send(mention.displayName + " à bien été kick");
                 }
@@ -71,7 +79,7 @@ Client.on("message", message => {
     }
 
     else {
-        mentions.roles.add("855478015391825980");
+        mentions.roles.add("Mute");
         message.reply(mention.displayName + " mute avec succés");
     }
        
@@ -81,5 +89,8 @@ Client.on("message", message => {
 Client.on("ready", function () {
     Client.user.setActivity(" !help Attend de nouvelle mise a jour de moi");
 });
+
+
+    
 
 Client.login(process.env.TOKEN);
